@@ -1,5 +1,6 @@
 {
     "name": "Bracket Validator in Elm",
+    "repository": "https://github.com/kgashok/vbracket",
     "env": {
         "ELM_COMPILE": "elm make Bracket.elm --output elm.js "
     },
