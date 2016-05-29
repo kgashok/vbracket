@@ -78,8 +78,19 @@ update msg model =
         ({ model | bmap = List.map updateEntry model.bmap }, Cmd.none)
 
     MouseMsg position ->
-      (model, Cmd.none)
-      
+        let 
+          {x, y} = position
+          onHeader = (x < 800) && (y <60)
+        in  
+          case (onHeader) of 
+            True -> 
+              ({ model | expression  = (toString position), 
+                         showBracket = (not model.showBracket), 
+                         showStack   = (not model.showStack)}, Cmd.none)
+            False -> 
+              (model, Cmd.none)
+
+        
     KeyMsg code ->
       case code of 
         2 ->  -- Ctrl-b
@@ -192,7 +203,7 @@ matchEnabledOpenrX o bp =
   bp.isEnabled && bp.opener == o 
 
 
-{-
+{- Not able to compile with transition to elm 0.17 
 getClosr3 : Char -> List BPair -> Maybe Char 
 getClosr3 opener bmap = 
   bmap 
