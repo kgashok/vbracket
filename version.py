@@ -60,6 +60,7 @@ version : String \n\
 '''
 
 	fileContent = fileContent + 'version = "' + version + '"\n\n'
+	fileContent = fileContent + 'gitRepo : String \n'
 	fileContent = fileContent + 'gitRepo = "' + repo + '"\n\n'
 	##################
 	## Just to be safe, we must backing up previous versionFile
