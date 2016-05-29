@@ -422,6 +422,9 @@ pageFooter =
       [ a [ href "http://j.mp/reactiveNotFad", target "_blank", rel "noopener noreferrer" ] 
       [ text "Reactive is not a fad" ] ],    
       footer [ ] 
+      [ a [ href "http://j.mp/relevantKG", target "_blank", rel "noopener noreferrer" ] 
+      [ text "Stay relevant via KG" ] ],    
+      footer [ ] 
       [ a [ href "http://edu.kgisl.com", target "_blank", rel "noopener noreferrer" ] 
       [ text "The Campus Inside" ] ]
     ]
