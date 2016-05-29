@@ -84,8 +84,7 @@ update msg model =
         in  
           case (onHeader) of 
             True -> 
-              ({ model | expression  = (toString position), 
-                         showBracket = (not model.showBracket), 
+              ({ model | showBracket = (not model.showBracket), 
                          showStack   = (not model.showStack)}, Cmd.none)
             False -> 
               (model, Cmd.none)
