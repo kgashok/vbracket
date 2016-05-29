@@ -18,7 +18,7 @@ status, repo = commands.getstatusoutput ("git ls-remote --get-url")
 if status: 
 	repo = defaultRepo 
 else: 
-	repo = repo.strip("\.git")
+	repo = repo.split(".")[0]
 
 status, version = commands.getstatusoutput ("git describe --tags --long")
 if not status: 
