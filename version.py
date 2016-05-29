@@ -16,7 +16,9 @@ import commands
 
 status, repo = commands.getstatusoutput ("git ls-remote --get-url") 
 if status: 
-	 repo = defaultRepo 
+	repo = defaultRepo 
+else: 
+	repo = repo.strip(".git")
 
 status, version = commands.getstatusoutput ("git describe --tags --long")
 if not status: 
