@@ -1,7 +1,7 @@
 {
     "name": "Bracket Validator in Elm",
     "env": {
-        "ELM_COMPILE": "elm make Hello.elm --output elm.js"
+        "ELM_COMPILE": "elm make Hello.elm --output elm.js "
     },
     "buildpacks": [
         {
