@@ -13,13 +13,14 @@ defaultRepo = "http://github.com/kgashok/vbracket"
 ## Get Version details
 ######################
 import commands
-import re 
 
 status, repo = commands.getstatusoutput ("git ls-remote --get-url") 
 if status: 
 	repo = defaultRepo 
-else: 
-	repo = re.sub('\.git$', '', repo) 
+else:
+	repo = repo.split (".git")[0] 
+	#import re 
+	#repo = re.sub('\.git$', '', repo) 
 
 status, version = commands.getstatusoutput ("git describe --tags --long")
 if not status: 
