@@ -6,11 +6,18 @@
 
 
 versionFile = "Version.elm"
+defaultRepo = "http://github.com/kgashok/vbracket" 
+
 
 #####################
 ## Get Version details
 ######################
 import commands
+
+status, repo = commands.getstatusoutput ("git ls-remote --get-url") 
+if status: 
+	 repo = defaultRepo 
+
 status, version = commands.getstatusoutput ("git describe --tags --long")
 if not status: 
 	print ("Version: " + version)
@@ -50,7 +57,7 @@ version : String \n\
 '''
 
 	fileContent = fileContent + 'version = "' + version + '"\n\n'
-
+	fileContent = fileContent + 'gitRepo = "' + repo + '"\n\n'
 	##################
 	## Just to be safe, we must backing up previous versionFile
 	##################

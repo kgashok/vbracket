@@ -14,7 +14,7 @@ import Dict exposing (fromList, get)
 
 import SStack as Stack exposing (..)
 --import BingoUtils as Utils 
-import Version exposing (version)
+import Version exposing (version, gitRepo)
 
 import Mouse
 import Keyboard
@@ -301,7 +301,7 @@ stackList display stack =
     [
       ul [ ] items,
       footer
-        [ ] [a [href "https://github.com/kgashok/elmo-bracket/issues/new", 
+        [ ] [a [href (gitRepo ++ "/issues/new"), 
                 target "_blank", 
                 rel "noopener noreferrer"] 
             [text version] ]
