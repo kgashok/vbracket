@@ -32,7 +32,7 @@ type Msg
   | KeyMsg Keyboard.KeyCode
 
 
-update : Msg -> Model -> (Model, Cmd Msg)
+-- update : Msg -> Model -> (Model, Cmd Msg)
 update msg model =
   case msg of
     NoOp ->
