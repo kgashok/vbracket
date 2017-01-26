@@ -1,3 +1,0 @@
-var _user$project$Hello$main = {
-	main: _elm_lang$html$Html$text('Hello, World!')
-};
